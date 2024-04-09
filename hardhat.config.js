@@ -2,6 +2,7 @@ require("@nomiclabs/hardhat-waffle")
 require("hardhat-gas-reporter")
 require("./tasks/block-number")
 require("./tasks/balance-checker")
+require("./tasks/interact-contract")
 // require("@nomiclabs/hardhat-etherscan")
 require("dotenv").config()
 require("solidity-coverage")
@@ -43,7 +44,7 @@ module.exports = {
     },
     gasReporter: {
         enabled: true,
-        currency: "USD",
+        currency: "EUR",
         outputFile: "gas-report.txt",
         noColors: true,
         coinmarketcap: COINMARKETCAP_API_KEY,
